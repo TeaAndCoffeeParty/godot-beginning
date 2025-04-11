@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsn8nwufno4i7"]
+
+[ext_resource type="PackedScene" uid="uid://cv22nuq4pvjk" path="res://sprite_2d.tscn" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_wtcfe")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 106.0
+offset_top = 62.0
+offset_right = 296.0
+offset_bottom = 168.0
+text = "Troggle motion"
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]

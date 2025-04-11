@@ -3,6 +3,10 @@ var speed = 400
 var angular_speed = PI
 func _init():
 	print("Hello, World!")
+	
+func _ready():
+	var timer = get_node("Timer")
+	timer.timeout.connect(_on_timer_timeout)
 
 func _process(delta):
 	#var direction = 0
@@ -22,3 +26,6 @@ func _process(delta):
 
 func _on_button_pressed() -> void:
 	set_process(not is_processing())
+	
+func _on_timer_timeout():
+	visible = not visible

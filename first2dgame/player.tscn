@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dbmh17ya35sm8"]
+[gd_scene load_steps=8 format=3 uid="uid://dbmh17ya35sm8"]
 
 [ext_resource type="Texture2D" uid="uid://dkj61x2ixftpk" path="res://art/playerGrey_up1.png" id="1_hqtel"]
+[ext_resource type="Script" uid="uid://3egv3m8x8bvf" path="res://player.gd" id="1_sweqy"]
 [ext_resource type="Texture2D" uid="uid://bkov7x4p3rh7y" path="res://art/playerGrey_up2.png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://cq5bcwirstywh" path="res://art/enemyWalking_1.png" id="3_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://bp22xpwm2gmok" path="res://art/enemyWalking_2.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://chmkjiqg8cime" path="res://art/playerGrey_walk1.png" id="4_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bdqashuj2ctym" path="res://art/playerGrey_walk2.png" id="5_2hs0m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
@@ -20,10 +21,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_2hs0m")
+"texture": ExtResource("4_sweqy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_1jxqw")
+"texture": ExtResource("5_2hs0m")
 }],
 "loop": true,
 "name": &"walk",
@@ -35,6 +36,7 @@ radius = 27.0
 height = 70.0
 
 [node name="Player" type="Area2D"]
+script = ExtResource("1_sweqy")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -10,6 +10,6 @@ config_version=5
 
 [application]
 
-config/name="2trun-base1"
+config/name="2turn-base1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"

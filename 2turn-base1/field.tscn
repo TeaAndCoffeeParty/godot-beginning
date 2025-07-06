@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://bfduxbufksdpk"]
+[gd_scene load_steps=3 format=3 uid="uid://bfduxbufksdpk"]
+
+[ext_resource type="Texture2D" uid="uid://dttda1i7dm8d3" path="res://Assets/地图场景/逍遥客栈.png" id="1_0cutk"]
+[ext_resource type="PackedScene" uid="uid://diluv5nojby5o" path="res://leader.tscn" id="2_6e7u2"]
 
 [node name="Field" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(396, -168)
+texture = ExtResource("1_0cutk")
+
+[node name="Leader" parent="." instance=ExtResource("2_6e7u2")]

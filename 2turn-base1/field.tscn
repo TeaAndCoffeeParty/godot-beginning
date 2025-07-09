@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfduxbufksdpk"]
+
+[ext_resource type="Texture2D" uid="uid://dttda1i7dm8d3" path="res://Assets/地图场景/逍遥客栈.png" id="1_0cutk"]
+[ext_resource type="Script" uid="uid://5xu0cjl4asfu" path="res://field.gd" id="1_vm625"]
+[ext_resource type="PackedScene" uid="uid://diluv5nojby5o" path="res://leader.tscn" id="2_6e7u2"]
+[ext_resource type="Script" uid="uid://dgm1kqtcab7gu" path="res://leader.gd" id="3_srqns"]
+[ext_resource type="PackedScene" uid="uid://cq15ac8ytygn6" path="res://Follower1.tscn" id="3_ujqnb"]
+[ext_resource type="Script" uid="uid://bw6cj0r8gabkf" path="res://follower_1.gd" id="6_gj8yl"]
+
+[node name="Field" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_vm625")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(396, -168)
+texture = ExtResource("1_0cutk")
+
+[node name="Follower1" parent="." instance=ExtResource("3_ujqnb")]
+position = Vector2(429, 486)
+script = ExtResource("6_gj8yl")
+
+[node name="Leader" parent="." instance=ExtResource("2_6e7u2")]
+position = Vector2(429, 486)
+script = ExtResource("3_srqns")

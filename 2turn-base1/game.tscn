@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4hw873ruyoai"]
+
+[ext_resource type="PackedScene" uid="uid://c3qf20bupi6x2" path="res://battle_field.tscn" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bfduxbufksdpk" path="res://field.tscn" id="2_feb5d"]
+
+[node name="Game" type="Node2D"]
+
+[node name="BattleField" parent="." instance=ExtResource("1_e2o6t")]
+
+[node name="Field" parent="." instance=ExtResource("2_feb5d")]

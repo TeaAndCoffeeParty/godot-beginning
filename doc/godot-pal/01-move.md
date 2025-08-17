@@ -96,3 +96,5 @@ func _ready() -> void:
     leader.connect("followMe", Callable(follower1, "follow"))
  pass
 ```
+
+## 七、代码优化

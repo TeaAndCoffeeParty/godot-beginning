@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://diluv5nojby5o" path="res://leader.tscn" id="2_6e7u2"]
 [ext_resource type="Script" uid="uid://dgm1kqtcab7gu" path="res://leader.gd" id="3_srqns"]
 [ext_resource type="PackedScene" uid="uid://cq15ac8ytygn6" path="res://Follower1.tscn" id="3_ujqnb"]
-[ext_resource type="Script" uid="uid://bw6cj0r8gabkf" path="res://follower_1.gd" id="6_gj8yl"]
+[ext_resource type="Script" uid="uid://bw6cj0r8gabkf" path="res://follower1.gd" id="6_gj8yl"]
 
 [node name="Field" type="Node2D"]
 y_sort_enabled = true

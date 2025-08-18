@@ -19,6 +19,10 @@ texture = ExtResource("1_0cutk")
 position = Vector2(429, 486)
 script = ExtResource("6_gj8yl")
 
+[node name="Follower2" parent="." instance=ExtResource("3_ujqnb")]
+position = Vector2(429, 486)
+script = ExtResource("6_gj8yl")
+
 [node name="Leader" parent="." instance=ExtResource("2_6e7u2")]
 position = Vector2(429, 486)
 script = ExtResource("3_srqns")

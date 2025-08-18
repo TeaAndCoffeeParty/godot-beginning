@@ -7,6 +7,8 @@ var hooked = false
 var offset = Vector2(24, 12)
 var currentDir = Vector2(1, -0.5)
 
+signal followMe()
+
 func follow(targetDirection, targetSpeed, targetPosition, perDistance):
 	if position_pool.is_empty():
 		position_pool.append([targetDirection, targetPosition,perDistance])
@@ -21,3 +23,4 @@ func follow(targetDirection, targetSpeed, targetPosition, perDistance):
 		currentDir = turningPoint[0]
 		global_position = turningPoint[1]
 		hooked = true
+		emit_signal("followMe", targetDirection, targetSpeed, global_position, perDistance)

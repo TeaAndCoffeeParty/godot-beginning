@@ -1,0 +1,24 @@
+extends ColorRect
+
+var speed: int = 200
+
+func _process(delta: float) -> void:
+	var velocity = Vector2.ZERO
+	
+	if Input.is_action_pressed("ui_right"):
+		velocity.x += 1
+	if Input.is_action_pressed("ui_left"):
+		velocity.x -= 1
+	if Input.is_action_pressed("ui_up"):
+		velocity.y -= 1
+	if Input.is_action_pressed("ui_down"):
+		velocity.y += 1
+	
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
+	
+	position += velocity * delta
+
+	var screen_size = get_viewport_rect().size
+	position.x = clamp(position.x, 0, screen_size.x - size.x)
+	position.y = clamp(position.y, 0, screen_size.y - size.y)

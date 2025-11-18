@@ -30,8 +30,8 @@ func update_ui() -> void:
 		button_attack.disabled = not is_player_turn
 		button_end_turn.disabled = not is_player_turn
 
-	var player_percent = player_data.hp / player_data.max_hp
-	var enemy_percent = enemy_data.hp / enemy_data.max_hp
+	#var player_percent = player_data.hp / player_data.max_hp
+	#var enemy_percent = enemy_data.hp / enemy_data.max_hp
 	
 	player_hp_label.text = "HP: %d/%d" % [player_data.hp, player_data.max_hp]
 	enemy_hp_label.text = "HP: %d/%d" % [enemy_data.hp, enemy_data.max_hp]

@@ -1,27 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci4wweor7tbc2"]
+[gd_scene load_steps=3 format=3 uid="uid://ci4wweor7tbc2"]
 
 [ext_resource type="Script" uid="uid://bacb0dbx8nq4q" path="res://battle_scene.gd" id="1_fw8re"]
+[ext_resource type="PackedScene" uid="uid://cqxlju245bhqj" path="res://character.tscn" id="2_r5l0u"]
 
 [node name="BattleScene" type="Node2D"]
 script = ExtResource("1_fw8re")
 
 [node name="PlayerTeam" type="Node2D" parent="."]
 
-[node name="PlayerUnit" type="ColorRect" parent="PlayerTeam"]
-offset_left = 200.0
-offset_top = 300.0
-offset_right = 250.0
-offset_bottom = 350.0
-color = Color(1, 0, 0, 1)
+[node name="PlayerUnit" parent="PlayerTeam" instance=ExtResource("2_r5l0u")]
+position = Vector2(625, 269)
+character_name = "Player"
 
 [node name="EnemyTeam" type="Node2D" parent="."]
 
-[node name="EnemyUnit" type="ColorRect" parent="EnemyTeam"]
-offset_left = 600.0
-offset_top = 300.0
-offset_right = 650.0
-offset_bottom = 350.0
-color = Color(0, 0, 1, 1)
+[node name="EnemyUnit" parent="EnemyTeam" instance=ExtResource("2_r5l0u")]
+position = Vector2(225, 264)
+character_name = "Enemy"
+hp = 80
+max_hp = 80
+attack = 8
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -54,22 +52,6 @@ text = "Attack"
 [node name="ButtonEndTurn" type="Button" parent="HUD/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "End Turn"
-
-[node name="HPLabels" type="Node2D" parent="."]
-
-[node name="PlayerHPLabel" type="Label" parent="HPLabels"]
-offset_left = 180.0
-offset_top = 360.0
-offset_right = 220.0
-offset_bottom = 383.0
-text = "HP: 100/100"
-
-[node name="EnemyHPLabel" type="Label" parent="HPLabels"]
-offset_left = 580.0
-offset_top = 360.0
-offset_right = 672.0
-offset_bottom = 383.0
-text = "HP: 100/100"
 
 [connection signal="pressed" from="HUD/MarginContainer/VBoxContainer/ButtonAttack" to="." method="_on_button_attack_pressed"]
 [connection signal="pressed" from="HUD/MarginContainer/VBoxContainer/ButtonEndTurn" to="." method="_on_button_end_turn_pressed"]

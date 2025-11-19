@@ -14,10 +14,6 @@ func _ready() -> void:
 	update_ui()
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 	
 func take_damage(damage_amount: int):
 	hp -= damage_amount

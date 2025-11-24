@@ -23,7 +23,7 @@ func update_ui() -> void:
 func _on_button_attack_pressed() -> void:
 	if game_over or not is_player_turn:
 		return
-	var damage = player_unit.attack
+	var damage = player_unit.get_attack()
 	enemy_unit.take_damage(damage)
 	
 	update_ui()
@@ -41,7 +41,7 @@ func _on_button_end_turn_pressed() -> void:
 		_enemy_turn()
 
 func _enemy_turn() -> void:
-	var damage = enemy_unit.attack
+	var damage = enemy_unit.get_attack()
 	player_unit.take_damage(damage)
 	
 	update_ui()

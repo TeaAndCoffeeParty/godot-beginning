@@ -1,0 +1,7 @@
+; jrpg_core.gdextension
+[configuration]
+entry_symbol = "jrpg_core_sdk_init"
+compatibility_minimum = 4.5
+
+[libraries]
+linux.editor.x86_64 = "res://addons/linux.editor.x86_64/libjrpg_core_sdk.so"

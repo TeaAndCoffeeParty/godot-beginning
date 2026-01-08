@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://be7lk8qvph6em"]
+[gd_scene load_steps=4 format=3 uid="uid://be7lk8qvph6em"]
 
 [ext_resource type="Texture2D" uid="uid://tnh6xw0xw4bi" path="res://Art/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="1_k8dsg"]
+[ext_resource type="Script" uid="uid://b4d4780ri20xq" path="res://Characters/player_cat.gd" id="1_u0lhy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8dsg"]
 size = Vector2(12, 6)
 
 [node name="PlayerCat" type="CharacterBody2D"]
+script = ExtResource("1_u0lhy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_k8dsg")

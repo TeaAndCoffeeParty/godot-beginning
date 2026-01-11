@@ -224,17 +224,15 @@ blend_mode = 1
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_twab1"]
-advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k8wwv"]
-advance_mode = 0
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_10mfh"]
 states/End/position = Vector2(689, 103)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_u0lhy")
-states/Idle/position = Vector2(330, 101)
+states/Idle/position = Vector2(332, 103)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_hhb2n")
-states/Walk/position = Vector2(479, 101)
+states/Walk/position = Vector2(490, 103)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_gx6m4"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_twab1"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_k8wwv")]
 
 [node name="PlayerCat" type="CharacterBody2D"]
@@ -258,5 +256,5 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_10mfh")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(-0.02280128, -0.10358751)
+parameters/Idle/blend_position = Vector2(0, 0.054260135)
 parameters/Walk/blend_position = Vector2(-0.0032573342, 0.20224214)

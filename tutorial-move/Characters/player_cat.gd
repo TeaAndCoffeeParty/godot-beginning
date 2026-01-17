@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 func update_animation_parameters(move_input: Vector2) -> void:
 	# 使用 playback 手动旅行到指定状态
 	if move_input.length() > 0.1:
-		state_machine.travel("Walk") # 确保这里的字符串和状态机里的状态名完全一致
+		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
 	

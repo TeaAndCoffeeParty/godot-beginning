@@ -13,3 +13,18 @@ config_version=5
 config/name="ThemingTutoal"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=800
+window/size/viewport_height=400
+window/size/mode=3
+window/stretch/scale=3.0
+
+[gui]
+
+theme/custom_font="uid://cjq8fy4lfuq4i"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

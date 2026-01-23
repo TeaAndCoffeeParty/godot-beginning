@@ -10,8 +10,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_pclro")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="Menu" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.75
+offset_top = -40.75
+offset_right = 37.75
+offset_bottom = 40.75
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pclro")
+texture = ExtResource("1_pqbjq")
+region_rect = Rect2(0, 0, 44, 44)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -24,8 +48,15 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_pclro")
-texture = ExtResource("1_pqbjq")
-region_rect = Rect2(6, 6, 32, 31)
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
+
+[node name="Inventory" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="Party" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Party"
+
+[node name="Quit" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "Quit"

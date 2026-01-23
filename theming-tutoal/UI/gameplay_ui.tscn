@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://g8i4ifg24ih7"]
+[gd_scene load_steps=3 format=3 uid="uid://g8i4ifg24ih7"]
 
-[sub_resource type="Theme" id="Theme_vf7hx"]
+[ext_resource type="Theme" uid="uid://dgon1wuyo13tf" path="res://UI/base_theme.tres" id="1_pclro"]
+[ext_resource type="Texture2D" uid="uid://dscq200unmccx" path="res://Assets/GUI_box.png" id="1_pqbjq"]
 
 [node name="GameplayUI" type="Control"]
 layout_mode = 3
@@ -9,9 +10,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_vf7hx")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 389.0
-offset_bottom = 389.0
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pclro")
+texture = ExtResource("1_pqbjq")
+region_rect = Rect2(6, 6, 32, 31)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

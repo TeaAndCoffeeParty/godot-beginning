@@ -18,3 +18,4 @@ Button/styles/hover = ExtResource("1_l30ol")
 Button/styles/normal = ExtResource("1_senvt")
 Panel/styles/panel = SubResource("StyleBoxFlat_a41xb")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_senvt")
+RichTextLabel/font_sizes/mono_font_size = 8

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhw2vqt7f2b0k"]
+
+[ext_resource type="Texture2D" uid="uid://c328s8uythwqc" path="res://Assets/GUI.png" id="1_p5h00"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycaob"]
+atlas = ExtResource("1_p5h00")
+region = Rect2(49, 97, 30, 30)
+
+[node name="Slot" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_ycaob")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 2

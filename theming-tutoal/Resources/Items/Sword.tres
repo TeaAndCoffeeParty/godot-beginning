@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://dint0hyo5k06d"]
+
+[ext_resource type="Texture2D" uid="uid://dywox5cqffu0m" path="res://Assets/axe.png" id="1_qvvkx"]
+[ext_resource type="Script" uid="uid://bbpex7dpl6t2f" path="res://UI/Item.gd" id="2_fildf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujba1"]
+atlas = ExtResource("1_qvvkx")
+region = Rect2(5, 5, 5, 14)
+
+[resource]
+script = ExtResource("2_fildf")
+title = "Sword"
+icon = SubResource("AtlasTexture_ujba1")
+description = "Knight's sword, can pierce armor.This sword can slice anyhting like butter."
+metadata/_custom_type_script = "uid://bbpex7dpl6t2f"

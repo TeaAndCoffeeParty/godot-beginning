@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhw2vqt7f2b0k"]
+[gd_scene load_steps=4 format=3 uid="uid://dhw2vqt7f2b0k"]
 
 [ext_resource type="Texture2D" uid="uid://c328s8uythwqc" path="res://Assets/GUI.png" id="1_p5h00"]
+[ext_resource type="Script" uid="uid://civ4ckljptbxd" path="res://UI/slot.gd" id="1_ycaob"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ycaob"]
 atlas = ExtResource("1_p5h00")
@@ -9,6 +10,7 @@ region = Rect2(49, 97, 30, 30)
 [node name="Slot" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_ycaob")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 2
@@ -16,3 +18,5 @@ texture = SubResource("AtlasTexture_ycaob")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

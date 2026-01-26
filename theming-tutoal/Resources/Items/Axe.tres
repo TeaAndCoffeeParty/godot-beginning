@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://px1a5j1vvphl"]
+
+[ext_resource type="Texture2D" uid="uid://dywox5cqffu0m" path="res://Assets/axe.png" id="1_ux48h"]
+[ext_resource type="Script" uid="uid://bbpex7dpl6t2f" path="res://UI/Item.gd" id="2_8k5js"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ji7w"]
+atlas = ExtResource("1_ux48h")
+region = Rect2(135, 24, 6, 17)
+filter_clip = true
+
+[resource]
+script = ExtResource("2_8k5js")
+title = "Axe"
+icon = SubResource("AtlasTexture_1ji7w")
+description = "Axe deals damage to enemies, this axe belongs to one of the soldiers of the kindom"
+metadata/_custom_type_script = "uid://bbpex7dpl6t2f"

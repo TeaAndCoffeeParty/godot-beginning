@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Character" load_steps=5 format=3 uid="uid://ckbu2ngw4kcsq"]
+
+[ext_resource type="Texture2D" uid="uid://xrck06p8g7fi" path="res://Assets/characters_32_24_16/characters_32_24_16_transparent.png" id="1_5kbcf"]
+[ext_resource type="Script" uid="uid://c4rb3ke2wnbqk" path="res://UI/Character.gd" id="2_6x6s0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yti2o"]
+atlas = ExtResource("1_5kbcf")
+region = Rect2(41, 75, 34, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0e8w"]
+atlas = ExtResource("1_5kbcf")
+region = Rect2(11, 76, 15, 31)
+
+[resource]
+script = ExtResource("2_6x6s0")
+title = "Bob"
+icon = SubResource("AtlasTexture_yti2o")
+texture = SubResource("AtlasTexture_r0e8w")
+description = "Eats food all day."
+metadata/_custom_type_script = "uid://c4rb3ke2wnbqk"

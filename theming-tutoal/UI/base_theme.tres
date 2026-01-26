@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dgon1wuyo13tf"]
+
+[ext_resource type="StyleBox" uid="uid://bjb6ijqyeyb7g" path="res://Resources/Theme & Stylebox/hover_button.tres" id="1_l30ol"]
+[ext_resource type="StyleBox" uid="uid://c8h3t0p7gtmdk" path="res://Resources/Theme & Stylebox/normal_button.tres" id="1_senvt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l30ol"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a41xb"]
+bg_color = Color(0.33321783, 0.64693063, 0.7645997, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_senvt"]
+bg_color = Color(0.9308113, 0.36107022, 0.64625454, 1)
+
+[resource]
+Button/font_sizes/font_size = 8
+Button/styles/focus = SubResource("StyleBoxEmpty_l30ol")
+Button/styles/hover = ExtResource("1_l30ol")
+Button/styles/normal = ExtResource("1_senvt")
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.5921569)
+Panel/styles/panel = SubResource("StyleBoxFlat_a41xb")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_senvt")
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.5568628)
+RichTextLabel/font_sizes/mono_font_size = 8
